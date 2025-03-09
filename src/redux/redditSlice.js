@@ -1,14 +1,17 @@
-import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { fetchPosts } from "../api/redditApi";
 
-export const loadPosts = createAsyncThunk('reddit/loadPosts', async (subreddit, {rejectWithValue}) => {
+export const loadPosts = createAsyncThunk(
+    'reddit/loadPosts',
+     async ({subreddit, sort}, {rejectWithValue}) => {
     try {
-    const response = await fetchPosts(subreddit);
+    const response = await fetchPosts(subreddit, sort);
     return response
     } catch (error) {
         return rejectWithValue(error.message);
     }
-});
+}
+);
 
 const redditSlice = createSlice({
     name: 'reddit',
@@ -32,7 +35,7 @@ const redditSlice = createSlice({
             state.loading = false;
             state.error = action.payload;
           });
-    }
+    },
 });
 
 export default redditSlice.reducer;
