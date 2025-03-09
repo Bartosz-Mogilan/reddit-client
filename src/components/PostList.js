@@ -1,9 +1,12 @@
 import React from "react";
 import Post from "./Post";
+import styles from "../css/postList.module.css";
 
-function PostList ({posts, onPostClick}) {
+function PostList ({ posts, onPostClick }) {
+    if(!posts.length) return <p>No Posts found.</p>;
+
     return (
-        <div>
+        <div className={styles.postList}>
             {posts.map((post) => (
                 <Post 
                 key={post.id}
@@ -15,7 +18,8 @@ function PostList ({posts, onPostClick}) {
                 />
             ))}
         </div>
-    )
+    );
 }
 
 export default PostList;
+
