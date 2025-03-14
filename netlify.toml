@@ -5,6 +5,6 @@
 [dev]
   command = "react-scripts start"
   functions = "netlify/functions"
-  targetPort = 3000
+  targetPort = 8888
 
   
