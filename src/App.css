@@ -1,11 +1,41 @@
-.app-container {
-  text-align: center;
-  background-color: #f0f0f0;
+.appContainer {
+  background: #121212;
   min-height: 100vh;
-  padding: 1rem;
+  padding-bottom: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.error-message {
-  color: red;
-  font-weight: bold;
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #d7dadc;
+  margin-top: 1rem;
 }
+
+.errorContainer {
+  text-align: center;
+  margin: 2rem;
+}
+
+.errorMessage {
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.retryButton {
+  padding: 0.5rem 1rem;
+  background: #928dab;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.retryButton:hover {
+  background: #7a6c99;
+}
+
+
+

@@ -1,0 +1,26 @@
+.filterBar {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.filterButton {
+  background: #2c2f33;
+  border: none;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.filterButton:hover {
+  background: #3a3d41;
+}
+
+.active {
+  background: #7289da;
+  color: #ffffff;
+}

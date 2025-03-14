@@ -5,14 +5,16 @@ import Header from './components/Header';
 import FilterBar from './components/FilterBar';
 import PostList from './components/PostList';
 import PostDetails from './components/PostDetails';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import styles from './App.css';
 
 function App() {
   const dispatch = useDispatch();
+  const { posts, loading, error } = useSelector((state) => state.reddit);
+
   const [selectedPost, setSelectedPost] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("hot");
-  const { posts, loading, error } = useSelector((state) => state.reddit);
 
   const subreddit = "reactjs";
 
@@ -37,7 +39,9 @@ function App() {
     <div className={styles.appContainer}>
       <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <FilterBar selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} />
+
       {loading && <p className={styles.loading}>Loading posts...</p>}
+
       {error && (
         <div className={styles.errorContainer}>
           <p className={styles.errorMessage}>{error}</p>
@@ -49,11 +53,13 @@ function App() {
           </button>
         </div>
       )}
+      
       {selectedPost ? (
         <PostDetails post={selectedPost} onBack={handleBack} />
       ) : (
         <PostList posts={filteredPosts} onPostClick={handlePostClick} />
       )}
+      <ScrollToTopButton />
     </div>   
   );
 }

@@ -1,23 +1,77 @@
-.card {
-  border: 1px solid #ddd;
-  padding: 1rem;
-  margin: 0.5rem auto;
-  cursor: pointer;
-  max-width: 600px;
+.card,
+.featuredCard {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  background: #282829;
+  color: #d7dadc;
+  border: 1px solid #343536;
+  border-radius: 8px;
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 800px;
+  height: 200px;
+  width:700px;           
+  box-sizing: border-box;
+  overflow: hidden;        
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.card:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.card:hover,
+.featuredCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.voteSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+  color: #ffffff;
+  min-width: 40px;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+.voteScore {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.postContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;   
 }
 
 .thumbnail {
-  width: 50px;
-  height: 50px;
-  margin-right: 1rem;
-  border-radius: 5px;
+  width: 70px;
+  height: 70px;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
+}
+
+.postTitle {
+  margin: 0 0 0.3rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.postAuthor {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
 }

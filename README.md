@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# My Reddit App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Reddit client built with React and Redux that fetches posts and comments from the Reddit JSON API. Users can search, filter, and view details for each post—including its comments—in a responsive, modern, and cohesive design.
 
-## Available Scripts
+## Wireframes
 
-In the project directory, you can run:
+Below are example wireframes for the application:
 
-### `npm start`
+- **Homepage / Post List View**  
+  ![Post List Wireframe]()  
+  _Description:_ The homepage displays a featured post at the top and a list of posts below. Each post is shown as a uniform card (fixed size) with vote arrows, title, author, and score. A header with a search input and filter buttons is displayed at the top.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Post Details View**  
+  ![Post Details Wireframe]()  
+  _Description:_ When you click a post, a detailed view appears (either as a modal or separate page) showing the full content of the post and a list of comments below. A “Back” button allows you to return to the post list.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React**: For building the user interface.
+- **Redux & Redux Toolkit**: For state management.
+- **Axios**: For making HTTP requests to the Reddit JSON API (via a Netlify function proxy).
+- **React-Markdown**: For rendering Markdown content from posts and comments.
+- **Jest & React Testing Library**: For unit testing React components (React 18 doesn't have official Enzyme support).
+- **Cypress**: For end-to-end testing.
+- **Netlify Functions**: For proxying API requests to avoid CORS issues.
+- **CSS Modules**: For component-scoped styling.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- **Responsive Design**: Works on any device from desktop to mobile.
+- **Modern Browser Support**: Compatible with all modern browsers.
+- **Search & Filter**: Users can search posts by keywords and filter by predefined categories (hot, new, top).
+- **Detailed View**: Clicking a post shows a detailed view with full post content and comments.
+- **Cohesive Design System**: Consistent look-and-feel with animations and hover transitions.
+- **Error Recovery**: Clear error messages and retry options if API calls fail.
+- **Optimized Performance**: With caching and best practices for high Lighthouse scores.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Future Work
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Dynamic Subreddit Input**: Allow users to enter a subreddit of their choice.
+- **Pagination/Infinite Scrolling**: Load more posts as the user scrolls.
+- **Progressive Web App (PWA)**: Enhance offline capabilities and installability.
+- **CI/CD Pipeline**: Automatically deploy on GitHub branch changes.
+- **Additional Unit/E2E Tests**: Increase test coverage and integration tests.
