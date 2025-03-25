@@ -9,7 +9,7 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/redditProxy/:splat"
+  to = "/.netlify/functions/redditProxy"
   status = 200
   force = true
 
