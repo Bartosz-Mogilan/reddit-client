@@ -7,4 +7,9 @@
   functions = "netlify/functions"
   targetPort = 3000
 
-  
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/redditProxy/:splat"
+  status = 200
+  force = true
+

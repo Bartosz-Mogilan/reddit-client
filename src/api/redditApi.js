@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const NETLIFY_PROXY_URL = "/.netlify/functions/redditProxy";
+const NETLIFY_PROXY_URL = "/api";
 
 const cache = {};
 const CACHE_EXPIRY = 300000;
