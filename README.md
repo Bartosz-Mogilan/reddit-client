@@ -2,18 +2,6 @@
 
 This is a Reddit client built with React and Redux that fetches posts and comments from the Reddit JSON API. Users can search, filter, and view details for each post—including its comments—in a responsive, modern, and cohesive design.
 
-## Wireframes
-
-Below are example wireframes for the application:
-
-- **Homepage / Post List View**  
-  ![Post List Wireframe]()  
-  _Description:_ The homepage displays a featured post at the top and a list of posts below. Each post is shown as a uniform card (fixed size) with vote arrows, title, author, and score. A header with a search input and filter buttons is displayed at the top.
-
-- **Post Details View**  
-  ![Post Details Wireframe]()  
-  _Description:_ When you click a post, a detailed view appears (either as a modal or separate page) showing the full content of the post and a list of comments below. A “Back” button allows you to return to the post list.
-
 ## Technologies Used
 
 - **React**: For building the user interface.
